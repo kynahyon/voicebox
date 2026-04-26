@@ -55,7 +55,8 @@
     "productName": "Voicebox",
     "copyright": "Copyright © 2024 voicebox contributors",
     "directories": {
-      "buildResources": "resources"
+      "buildResources": "resources",
+      "output": "release"
     },
     "files": [
       "dist/**/*"
