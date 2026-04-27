@@ -15,6 +15,7 @@ export class Voicebox {
       rate: 1.0,
       pitch: 1.0,
       volume: 1.0,
+      lang: 'en-GB', // personal preference: default to British English
       ...config,
     };
     this.engine = createEngine(config.engine ?? 'web-speech', this.config);
@@ -35,7 +36,7 @@ export class Voicebox {
       pitch: options?.pitch ?? this.config.pitch ?? 1.0,
       volume: options?.volume ?? this.config.volume ?? 1.0,
       voice: options?.voice ?? this.config.voice,
-      lang: options?.lang ?? this.config.lang ?? 'en-US',
+      lang: options?.lang ?? this.config.lang ?? 'en-GB',
     };
 
     await this.engine.speak(text, utteranceOptions);
